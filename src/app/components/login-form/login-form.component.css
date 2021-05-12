@@ -1,0 +1,89 @@
+.landingPage {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 3em;
+}
+
+@media screen and (max-width:715px ) {
+    .landingPage {
+        margin-top: 2em;
+        flex-direction: column-reverse;
+    }
+    .loginForm {
+        width: 20em;
+    }
+}
+
+
+.loginForm {
+    width: 20em;
+    height: 21.8em;
+    border: 2px solid cadetblue;
+    border-radius: 10px;
+    align-items: center;
+    padding: 2em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.loginForm form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    
+}
+
+.inputField {
+    width: 100%;
+    
+}
+
+.inputField input {
+    height: 2.5em;
+    margin-bottom: 0.5em;
+    border: 2px solid #808080;
+    border-radius: 5px;
+    padding-left: .5em;
+}
+
+.inputField label {
+    font-size: .9em;
+    margin-top: 1.5em;
+    margin-bottom: .2em;
+}
+
+.help-block{
+    margin-bottom: .2rem;
+
+}
+
+
+.buttons {
+    display: flex;
+}
+
+.buttons button {
+    margin: auto;
+    margin-top: 1em;
+    width: 40%;
+    height: 3em;
+    background-color: inherit;
+    cursor: pointer;
+    border: 1px solid #5f9ea0;
+    border-radius: 5px;
+    color: cadetblue;
+}
+
+.buttons button:hover {
+    background-color: cadetblue;
+    color: white;
+    transition: .5s;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid rgb(252, 76, 76);
+  }
+

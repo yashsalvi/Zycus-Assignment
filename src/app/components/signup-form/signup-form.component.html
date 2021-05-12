@@ -1,0 +1,31 @@
+<div class="landingPage">
+    <app-landing></app-landing>
+    <div class="signupForm">     
+        <form class="inputField" (ngSubmit)="signup()" #f="ngForm">
+            <label>E-mail</label>
+            <input type="text" [(ngModel)]="email"    
+            name="email" 
+            email
+            ngModel
+            #emailRef="ngModel"
+            required 
+            />   
+            <span class="help-block" *ngIf="!emailRef.valid && emailRef.touched">Please enter a valid email</span> 
+            <label>Password</label>
+            <input type="password" [(ngModel)]="password" 
+            name="password" 
+            required
+            ngModel
+            #pass="ngModel"
+            minlength="6"/>
+            <span class="help-block" *ngIf="!pass.valid && pass.touched">Atleast 6 characters</span>     
+            <div class="buttons">             
+                <button type="submit" >
+                    Signup
+                </button>
+            </div>        
+        </form>    
+    </div>
+</div>
+
+

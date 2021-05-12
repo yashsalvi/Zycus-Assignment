@@ -1,0 +1,27 @@
+<div class="landingPage">
+    <app-landing></app-landing>
+    <div class="loginForm">
+        <form class="inputField" (ngSubmit)="login()" #f="ngForm">
+            <label>E-mail </label>
+            <input type="text" [(ngModel)]="email" name="email" required  email
+            ngModel
+            #emailRef="ngModel"  />
+            <span class="help-block" *ngIf="!emailRef.valid && emailRef.touched">Enter a valid email</span>     
+            <label>Password</label>
+            <input type="password" [(ngModel)]="password"
+            ngModel
+            #pass="ngModel"
+             name="password" required   minlength="6"/>
+            <span class="help-block" *ngIf="!pass.valid && pass.touched"> Enter a valid password</span>     
+            <div class="buttons">
+                <button type="submit" >
+                    Login
+                </button>
+            </div>
+            
+        </form>
+        
+    </div>
+</div>
+
+

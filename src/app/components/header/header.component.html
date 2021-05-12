@@ -1,0 +1,15 @@
+<div class="header">
+    <app-logo></app-logo>
+    <ng-template  [ngIf]="isAuthenticated()">
+      <div class="wrap" >  
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="Type to search">
+           <button type="submit" class="searchButton"> 
+             <i class="fa fa-search"></i>
+          </button>
+        </div>
+     </div>
+    </ng-template>
+    <app-navigation></app-navigation>
+</div>
+

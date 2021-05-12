@@ -7,7 +7,15 @@ import {Chart} from 'chart.js';
 import { Ialbum } from 'src/app/models/ialbum';
 import { AlbumsService } from 'src/app/service/albums.service';
 
+ transform(value: any,limit:number ) {
+    if(value.length>limit){
+      return value.substr(0,limit)+ ' .....'
+  }
+  return value;                                                          // you will get first 10 characters.
+}
 
+
+| shorten:110
 
 
 

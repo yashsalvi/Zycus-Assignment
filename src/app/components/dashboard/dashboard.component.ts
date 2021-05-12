@@ -17,6 +17,14 @@ import { AlbumsService } from 'src/app/service/albums.service';
 
 | shorten:110
 
+apiKey: "AIzaSyDQjmRxVw-bFSLPZQm4SunZkGfCCR-zU-Q",
+    authDomain: "zycusassignment.firebaseapp.com",
+    projectId: "zycusassignment",
+    storageBucket: "zycusassignment.appspot.com",
+    messagingSenderId: "356128493447",
+    appId: "1:356128493447:web:baf561a11eb8a2c9ea8d22",
+    measurementId: "G-JCPYG9K0JR"
+
 
 
 @Component({

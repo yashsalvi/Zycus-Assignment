@@ -14,6 +14,8 @@ import { AlbumsService } from 'src/app/service/albums.service';
   return value;                                                          // you will get first 10 characters.
 }
 
+https://zycusassignment-default-rtdb.firebaseio.com/
+
 
 | shorten:110
 

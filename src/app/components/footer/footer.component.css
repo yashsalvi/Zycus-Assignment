@@ -1,10 +1,10 @@
 .site-footer
 {
-  background-color:#26272b;
+  background-color:cadetblue;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
-  color:#737373;
+  color:black;
 }
 .site-footer hr
 {
@@ -27,6 +27,10 @@
 {
   color:#737373;
 }
+.copyright-text a{
+color: black;
+}
+
 .site-footer a:hover
 {
   color:#3366cc;

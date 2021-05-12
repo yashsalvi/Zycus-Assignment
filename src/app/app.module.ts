@@ -15,10 +15,13 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireMessagingModule } from '@angular/fire/messaging';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+
+
 import { environment } from 'src/environments/environment';
 import { FormsModule } from '@angular/forms';
 import { AuthService, LoginGuard } from './service/auth.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+
 import { PostsComponent } from './components/posts/posts.component';
 import { UsersComponent } from './components/users/users.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
@@ -37,11 +40,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { CommonModule } from '@angular/common';
 
-
-import { FilterPipe } from './filter.pipe';
 import { ShortenPipe } from './shorten.pipe';
 import { FooterComponent } from './components/footer/footer.component';
-
 
 
 export function playerFactory() {
@@ -67,7 +67,6 @@ export function playerFactory() {
     LoadingChartComponent,
     ClickLottieComponent,
     ErrorPageComponent,
-    FilterPipe,
     ShortenPipe,
     FooterComponent,
   ],

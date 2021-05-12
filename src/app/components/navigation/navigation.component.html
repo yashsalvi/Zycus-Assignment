@@ -1,10 +1,10 @@
 <div class="navigationBar">
-  <div class="navigationMenu" *ngIf="!isAuthenticated()">
-    <a  routerLink=""><button class="navigationButton" >Log In</button></a>
-    <a  routerLink="/signup"><button class="navigationButton" >Sign Up</button> </a>
+  <div class="navigationMenu" *ngIf="!isAuthenticated()" >
+   <a  routerLink=""><button class="navigationButton" >Log In</button></a>
+    <a  routerLink="/signup" ><button class="navigationButton" >Sign Up</button> </a>
   </div>
   <div class="navigationMenu" *ngIf="isAuthenticated()">
-    <a  routerLink="/albums"><button class="navigationButton" >Albums</button></a>
+    <a  class="active" routerLink="/albums"><button class="navigationButton" >Albums</button></a>
     <a  routerLink="/posts"><button class="navigationButton" >Posts</button></a>
     <a  routerLink="/users"><button class="navigationButton" >Details</button></a>
     <button class="navigationButton" (click)="logout()">Logout</button>

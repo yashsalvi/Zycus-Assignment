@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyC6fVA8R8rLVUsWsHolyQgmkB2sTMy3f_I",
+    apiKey: "AIzaSyC6fVA8R8rLVUsWsHolyQgmkB2sTMy3f_I",    //firebase
     authDomain: "assesment-app.firebaseapp.com",
     databaseURL: 'assesment-app-default-rtdb.firebaseio.com',
     projectId: "assesment-app",
@@ -13,6 +13,7 @@ export const environment = {
     messagingSenderId: "314887605742",
   }
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

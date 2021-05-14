@@ -34,14 +34,20 @@ import player from 'lottie-web';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoadingComponent } from './components/loading/loading.component';
 import { LandingComponent } from './components/landing/landing.component';
-import { LoadingChartComponent } from './components/loading-chart/loading-chart.component';
+
 import { ClickLottieComponent } from './components/click-lottie/click-lottie.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { CommonModule } from '@angular/common';
 
+// import { MatCardModule } from '@angular/material/card';
 import { ShortenPipe } from './shorten.pipe';
 import { FooterComponent } from './components/footer/footer.component';
+import {PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PhotoComponent } from './components/photo/photo.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 
 export function playerFactory() {
@@ -64,28 +70,35 @@ export function playerFactory() {
     SelectedUserComponent,
     LoadingComponent,
     LandingComponent,
-    LoadingChartComponent,
     ClickLottieComponent,
     ErrorPageComponent,
     ShortenPipe,
     FooterComponent,
+    PhotoComponent,
+
   ],
   imports: [
     BrowserModule,
     CommonModule,
+    MDBBootstrapModule.forRoot(),
+    PerfectScrollbarModule,
     FormsModule,
+   NgxSpinnerModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireMessagingModule,
     AngularFireStorageModule,
     FormsModule,
+    // MatCardModule,
     HttpClientModule,
     LottieModule.forRoot({ player: playerFactory }),
     BrowserAnimationsModule, 
     ToastrModule.forRoot(),
   ],
+
   providers: [
+ 
     AngularFirestore,
     LoginActivate,
     AuthService,

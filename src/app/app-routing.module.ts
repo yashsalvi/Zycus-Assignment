@@ -14,7 +14,8 @@ import {
   Router,
 } from '@angular/router';
 import { ErrorPageComponent } from './error-page/error-page.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+ import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PhotoComponent } from './components/photo/photo.component';
 
 @Injectable()
 export class LoginActivate implements CanActivate {
@@ -37,6 +38,10 @@ const appRoutes: Routes = [
   { path: 'albums', component: DashboardComponent, canActivate: [LoginGuard] },
   { path: 'posts', component: PostsComponent, canActivate: [LoginGuard] },
   { path: 'users', component: UsersComponent, canActivate: [LoginGuard] },
+  { path: 'photos/:albumId', component: PhotoComponent ,canActivate: [LoginGuard]},
+  { path: 'photos', component: PhotoComponent,canActivate: [LoginGuard] },
+ 
+ 
   {
     path: 'not-found',
     component: ErrorPageComponent,

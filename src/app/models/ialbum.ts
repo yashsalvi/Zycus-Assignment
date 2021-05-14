@@ -1,4 +1,4 @@
-export interface Ialbum {
+export interface AlbumModel {
     userId : number; 
     id : number;     
     title : string   

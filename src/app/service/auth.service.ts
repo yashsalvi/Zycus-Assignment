@@ -27,6 +27,7 @@ export class AuthService {
       .then(value => {
         console.log('Success!', value);
        this.toastr.success('Please login','Registration successful'); 
+       this.router.navigate([""])
       })
       .catch(err => {
         console.log('Something went wrong:',err.message);

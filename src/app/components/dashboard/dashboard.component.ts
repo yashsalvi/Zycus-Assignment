@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { PhotoModel } from 'src/app/models/photo.model';
 import { User } from 'src/app/models/User';
-
-// import { Ialbum } from 'src/app/models/ialbum';
 import { AlbumsService } from 'src/app/service/albums.service';
+
+
+
 
 
 
@@ -78,6 +79,13 @@ export class DashboardComponent implements OnInit {
     //   });                                             
     // }                                           
 }
+
+
+
+
+
+
+
 
 
 

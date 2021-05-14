@@ -29,14 +29,38 @@
     </div>    
 </div> -->
 
-<section>
+<!-- <section>
     <table>
       <tr><th>Id</th><th>User Id</th><th>Album</th></tr>
       <tr *ngFor="let album of albums"><td>{{album.id}}</td><td>{{album.userId}}</td><td>{{album.title}}</td></tr>
     </table>
-  </section>
+  </section> -->
 
-
+  <div class="container">
+    <div class="row">
+      <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1>  <strong>Gallery</strong></h1>
+      
+      </div>
+      
+      <div class="col-sm-4" *ngFor="let album of filteredAlbums">
+        <a routerLink="/photos/{{album.id}}">
+          <div class="card" style="width: 35rem;">
+            <br>
+            <div class="card-body">
+              {{album.title}}
+            </div>
+          </div>
+        </a>
+      </div>
+  
+    </div>
+  </div>
+  
+  <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
+    <p style="color: white">Please Wait. </p>  
+  </ngx-spinner> 
+   
 
 
 

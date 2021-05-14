@@ -240,3 +240,57 @@ export class DashboardComponent implements OnInit {
 // //     },3000)
 // //   }
 // }
+
+
+
+ photos!: PhotoModel[];
+  users!: User[];
+
+  filteredAlbums: any;
+  albums:any;
+
+  
+  constructor(
+    private albumsService: AlbumsService,
+    private spinner: NgxSpinnerService
+  ) { }
+
+  ngOnInit() {
+    // this.getAlbums()
+    // this.getPosts()
+    this.fetchData()
+  }
+  
+
+  filterAlbums(searchString: string) {
+    return this.albums.filter((album: { title: string; }) =>
+      album.title.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
+  }
+
+  private fetchData() {
+    this.spinner.show();
+    const promise = this.albumsService.getAlbums();
+    promise.then((data) => {
+      this.albums = data;
+      this.filteredAlbums = this.albums;
+    }).catch((error) => {
+      console.log(JSON.stringify(error));
+    }).finally(() => {
+      this.spinner.hide();
+    });
+  }
+
+  setUserName() {
+    if (this.photos && this.users) {
+      for(const photo of this.photos) {
+        for(const user of this.users) {
+          for(const album of this.albums) {
+          if (photo.albumId === user.id) {
+            photo.albumId = album.id
+            }
+          }
+        }
+      }
+    }
+  }
+
